@@ -25,4 +25,5 @@ You can pass in the order options like this...
 
 User.simple_search_query("foo", :order => "name DESC")
 
-Copyright (c) 2009 Ruby Miner LLC, released under the MIT license
+Copyright (c) 2009 RubyMiner LLC, released under the MIT license
+================================================================
