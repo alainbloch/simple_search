@@ -1,0 +1,544 @@
+# Logfile created on Mon Dec 14 13:34:45 -0800 2009 by /
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/load_schema.rb:34:in `load_fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:5
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.8ms)[0m   [0mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('This will not be bolded.', '')[0m
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.8ms)[0m   [0;1mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('', 'This will not be bolded.')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (35.8ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0;1mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.6ms)[0m   [0mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('', 'This will not be bolded.')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.6ms)[0m   [0;1mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.4ms)[0m   [0mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('', 'This will not be bolded.')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.6ms)[0m   [0;1mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('<b>This will not be bolded.</b>', NULL)[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES(NULL, '<b>This will not be bolded.</b>')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('This will not be bolded.', '')[0m
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.6ms)[0m   [0;1mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('', 'This will not be bolded.')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.6ms)[0m   [0;1mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.6ms)[0m   [0mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('', 'This will not be bolded.')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.6ms)[0m   [0;1mSELECT * FROM "mocks" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (27.0ms)[0m   [0;1mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('', 'This will not be bolded.')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (1.4ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%')[0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.5ms)[0m   [0mSELECT * FROM "mocks" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0;1mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.9ms)[0m   [0mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('', 'This will not be bolded.')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.6ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%')[0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.6ms)[0m   [0mSELECT * FROM "mocks" [0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.2ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%foobar%') OR (mock_text LIKE '%foobar%')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0;1mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.4ms)[0m   [0mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('', 'This will not be bolded.')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.3ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%foobar%') OR (mock_text LIKE '%foobar%')[0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.5ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.6ms)[0m   [0;1mSELECT * FROM "mocks" [0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.2ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%foobar%') OR (mock_text LIKE '%foobar%')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0;1mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0mINSERT INTO "mocks" ("mock_string", "mock_text") VALUES('', 'This will not be bolded.')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.3ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%apple%') OR (mock_text LIKE '%apple%')[0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.5ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (1.4ms)[0m   [0;1mSELECT * FROM "mocks" [0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.2ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%foobar%') OR (mock_text LIKE '%foobar%')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (9.4ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text, "position" integer) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.6ms)[0m   [0;1mINSERT INTO "mocks" ("position", "mock_string", "mock_text") VALUES(NULL, 'This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0mINSERT INTO "mocks" ("position", "mock_string", "mock_text") VALUES(NULL, '', 'This will not be bolded.')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.4ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%apple%') OR (mock_text LIKE '%apple%')[0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.7ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.7ms)[0m   [0;1mSELECT * FROM "mocks" [0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.2ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%foobar%') OR (mock_text LIKE '%foobar%')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (1.1ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%') ORDER BY position [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text, "position" integer) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0;1mINSERT INTO "mocks" ("position", "mock_string", "mock_text") VALUES(NULL, 'This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0mINSERT INTO "mocks" ("position", "mock_string", "mock_text") VALUES(NULL, '', 'This will not be bolded.')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.4ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%apple%') OR (mock_text LIKE '%apple%')[0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.6ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.6ms)[0m   [0;1mSELECT * FROM "mocks" [0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.2ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%foobar%') OR (mock_text LIKE '%foobar%')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (1.6ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%') ORDER BY position ASC [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (6.7ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text, "position" integer) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0;1mINSERT INTO "mocks" ("position", "mock_string", "mock_text") VALUES(NULL, 'This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0mINSERT INTO "mocks" ("position", "mock_string", "mock_text") VALUES(NULL, '', 'This will not be bolded.')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.5ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%apple%') OR (mock_text LIKE '%apple%')[0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.6ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (5.7ms)[0m   [0;1mSELECT * FROM "mocks" [0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.3ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%foobar%') OR (mock_text LIKE '%foobar%')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (1.9ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%') ORDER BY position DESC [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mDROP TABLE "mocks"[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "mocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "mock_string" varchar(255), "mock_text" text, "position" integer) [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+Unable to load mock, underlying cause no such file to load -- mock 
+
+ /opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/opt/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:158:in `require'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:265:in `require_or_load'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:224:in `depend_on'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:136:in `require_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `each'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/Users/alainbloch/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/fixtures.rb:848:in `fixtures'
+./vendor/plugins/simple_search/test/simple_search_test.rb:10
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load_without_new_constant_marking'
+/Users/alainbloch/.gem/ruby/1.8/gems/activesupport-2.3.4/lib/active_support/dependencies.rb:147:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0;1mINSERT INTO "mocks" ("position", "mock_string", "mock_text") VALUES(NULL, 'This will not be bolded.', '')[0m
+  [4;35;1mHtmlSanitizerTest::Mock Create (0.5ms)[0m   [0mINSERT INTO "mocks" ("position", "mock_string", "mock_text") VALUES(NULL, '', 'This will not be bolded.')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.5ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%apple%') OR (mock_text LIKE '%apple%')[0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.5ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (0.6ms)[0m   [0;1mSELECT * FROM "mocks" [0m
+  [4;35;1mSimpleSearchTest::Mock Load (0.2ms)[0m   [0mSELECT * FROM mocks WHERE (mock_string LIKE '%foobar%') OR (mock_text LIKE '%foobar%')[0m
+  [4;36;1mSimpleSearchTest::Mock Load (1.2ms)[0m   [0;1mSELECT * FROM mocks WHERE (mock_string LIKE '%something%') OR (mock_text LIKE '%something%') ORDER BY position DESC [0m
