@@ -17,13 +17,11 @@ simple_search :fields => [:name, :email, :zip_code]
 
 Now you have a simple_search method on your User model:
 
-User.simple_search_query("foo") 
-
-=> [#<User id:1, email:"foo@foo.com" ...
+User.simple_search_query("foo") #=> [#<User id:1, email:"foo@foo.com">]
 
 You can pass in the order options like this...
 
 User.simple_search_query("foo", :order => "name DESC")
 
-Copyright (c) 2009 RubyMiner LLC, released under the MIT license
+&copy 2009 RubyMiner LLC, released under the MIT license
 ================================================================
