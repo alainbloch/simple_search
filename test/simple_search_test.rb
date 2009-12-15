@@ -14,20 +14,39 @@ class SimpleSearchTest < ActiveSupport::TestCase
     simple_search :fields => [:mock_string, :mock_text]
   end
   
+  # Another class we use to make sure that the methods are not extended
+  # 
+  class Foo < ActiveRecord::Base
+  end
+  
   test "has a Mock class initialized" do
     assert_nothing_raised("NameError"){ Mock.new }
+  end
+  
+  test "has a Foo class initialized" do
+    assert_nothing_raised("NameError"){ Foo.new }
   end
   
   test "should have several mocks in place" do
     assert(!Mock.all.empty?)
   end
   
-  test "respond to simple_search method" do
+  test "Mock should respond to simple_search method" do
     assert_respond_to(Mock, :simple_search)
   end
   
-  test "respond to simple_search_query method" do
+  test "Foo should respond to simple_search method" do
+    assert_respond_to(Foo, :simple_search)
+  end
+  
+  test "Mock should respond to simple_search_query method" do
     assert_respond_to(Mock, :simple_search_query)
+  end
+  
+  # Foo hasn't called the simple_search method so the simple_search query
+  # shouldn't be available.
+  test "Foo should not respond to simple_search_query method" do
+    assert(!Foo.respond_to?(:simple_search_query))
   end
   
   test "should find several Mocks by querying 'something'" do
