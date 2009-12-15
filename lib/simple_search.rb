@@ -10,8 +10,11 @@ module SimpleSearch
                                   :fields => (options[:fields] || []) 
                                   })
       class_inheritable_reader :simple_search_options
+      send :extend, SimpleSearch::SingletonMethods
     end
+  end
 
+  module SingletonMethods
     # New search method. Its not a simple SQL statement since we want to sanitize the statement before processing.  
     def simple_search_query(query = "", options = {})
       return if simple_search_options[:fields].empty? or query.blank?
@@ -46,7 +49,5 @@ module SimpleSearch
 
       return collection
     end
-       
-  end
-  
+  end  
 end
