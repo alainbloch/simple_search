@@ -6,4 +6,7 @@ ActiveRecord::Schema.define(:version => 0) do
     t.column :position, :integer
   end
 
+  create_table :foos, :force => true do |t|
+  end
+
 end
